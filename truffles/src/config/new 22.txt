@@ -1,0 +1,16 @@
+db.users.update({'_id' : ObjectId("5cc2ad4297a6035f40619b8a")}, 
+                     {'$set' : {'profilepicPath' : "" }})
+					 
+					 db.users.createIndex( { "username": 1,phone:1 }, { unique: true, dropDups:true} )
+					 
+					 
+					 db.users.remove({'_id' : ObjectId("5cab13a1543465173899a193")})
+         )
+					 
+					 
+					 db.users.update( 
+    {}, 
+    {'$set': {"followers":[]}}, 
+    false, 
+    true
+)

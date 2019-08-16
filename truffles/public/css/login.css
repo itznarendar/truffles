@@ -1,0 +1,208 @@
+html, body {
+    background-color: #9FB3CD;
+    /*background: -webkit-linear-gradient(top, #007DB8 0%, #EEEEEE 100%);
+    background: linear-gradient(to bottom, #007DB8 0%, #EEEEEE 100%);*/
+    background: -webkit-linear-gradient(top, #1A2226 0%, #ECF0F5 100%);
+    background: linear-gradient(to bottom, #1A2226 0%, #ECF0F5 100%);
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    height: 100%; /*Allow spacing based on window height*/
+    margin: 0;
+    min-height: 240px;
+}
+
+.content {
+    /*A box that the form resides in - centered vertically and horizontally based on the window. The max-width and % width combo allow it to resize for small devices*/
+    background: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: block;
+    left: 50%;
+    width: 90%;
+    max-width: 360px;
+    position: absolute;
+    top: 40%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.login-title {
+    text-align: center;
+    padding: 10px;
+    color: #234A72;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+form {
+    display: block;
+    margin: auto;
+    padding: 27px 0;
+    width: 85%;
+}
+
+.mat-in {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #9E9E9E;
+    display: block;
+    font-size: 16px;
+    padding: 8px 0px;
+    -webkit-transition: 0.2s border-bottom;
+    transition: 0.2s border-bottom;
+    width: 100%;
+}
+
+input:focus, input:invalid {
+    box-shadow: none;
+    outline: none;
+}
+
+input:focus {
+    border-bottom: 1px solid #2196f3;
+}
+
+/*Labels*/
+label {
+    color: #9E9E9E;
+    font-size: 16px;
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+    color: #2196f3;
+    font-size: 12px;
+    top: -16px;
+}
+
+/*Bar that appears when an input is selected*/
+.bar:before, .bar:after {
+    background: #2196f3;
+    bottom: 1px;
+    content: '';
+    height: 2px;
+    position: absolute;
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+    width: 0;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width: 50%;
+}
+
+input:-webkit-autofill {
+    background-color: #fff !important;
+}
+
+#login {
+    background: #2196f3;
+    border: none;
+    border-radius: 2px;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.999;
+    padding: 8px 0;
+    position: relative;
+    -webkit-transition: 0.2s ease background;
+    transition: .2s ease background;
+    width: 100%;
+}
+
+#login:hover {
+    background: #1976d2;
+}
+
+#login:before, #login:after {
+    border-radius: 2px;
+    content: '';
+    height: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    -webkit-transition: 0.2s ease all;
+    transition: .2s ease all;
+    z-index: -1;
+}
+
+#login:before {
+    top: 50%;
+}
+
+#login:after {
+    bottom: 50%;
+}
+
+#login:active:before, #login:active:after {
+    background: #0d47a1;
+    height: 50%;
+    opacity: 1;
+}
+
+.error {
+    color: #F44336;
+    margin: 16px auto 0;
+    text-align: center;
+    width: 90%;
+}
+
+.user-photo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    z-index: 100;
+    margin-left: -50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: none;
+    /* 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); */
+    /* 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8); */
+    /* 	box-shadow: 0 0 8px rgba(0, 0, 0, .8); */
+}
+
+.user-photo img {
+    z-index: 100;
+    width: 100px;
+    height: 100px;
+}
+
+
+.logo-dell {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
